@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Harvesters - Vous avez été piraté</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .message {
+            font-size: 30px;
+            animation: glitch 1s infinite;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(3px, 3px); }
+            40% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, -3px); }
+            80% { transform: translate(-3px, 3px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="message">DATA HARVESTERS</h1>
+    <p class="message">Vous avez été piraté... Le système est en train de se détruire !</p>
+
+    <script>
+        setTimeout(() => {
+            alert("Données volées ! Vous êtes piraté !");
+            document.body.innerHTML = "<h1 style='color: red;'>Le système est verrouillé !</h1>";
+        }, 5000); // 5 secondes
+    </script>
+</body>
+</html>
